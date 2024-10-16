@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuperHero Finder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>SuperHero Finder</h1>
+        <input type="text" id="hero-name" placeholder="Buscar Herói">
+        
+        <select id="sort-option">
+            <option value="strength">Força</option>
+            <option value="intelligence">Inteligência</option>
+            <option value="speed">Agilidade</option>
+        </select> 
+
+        <select id="type-option">
+            <option value="">Selecionar Tipo</option>
+            <option value="hero">Herói</option>
+            <option value="villain">Vilão</option>
+            <option value="antihero">Anti-Herói</option>
+        </select>       
+
+        <button id="search-btn">Buscar</button>
+        <button id="logs-btn" onclick="toggleLogs()">Ver Logs</button>
+    </header>
+
+    <main>
+        <div id="hero-info"></div>
+        <div id="pagination-controls"></div>
+    </main>
+
+    <div id="logs-container" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span class="close" onclick="toggleLogs()">&times;</span>
+            <h2>Logs Registrados</h2>
+            <div id="logs-info"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
